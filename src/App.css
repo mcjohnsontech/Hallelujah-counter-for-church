@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "digital-7";
+  src:
+    local("digital-7"),
+    url("/public/digital-7.ttf") format("truetype");
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-header >div {
+  display: flex;
+  grid-gap: 1.6rem;
+  width: 400px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.App-header >div> span {
+  font-family: digital-7;
+  font-size: 7rem;
+}
+
+.App-input {
+  outline: 2px solid white;
+  border: 0;
+  border-radius: 0.4rem;
+  width: 500px;
+  height: 35px;
+  background: transparent;
+  color: white;
+  padding: 0, 1rem, 0, 1rem;
+}
+.App-input:placeholder,
+.App-input::value {
+  text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-control:focus{
+  background-color: transparent;
+  outline: white;
+  color: white;
+  border-color: white;
+  box-shadow: 0 0 0px 0.2rem rgb(255 255 255 / 95%);
+}
+
+.App-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  outline: 0;
+  margin-top: 2rem;
+}
+.App-button:active {
+  outline: 0;
+  border: 0;
+}
+.App-link {
+  color: #61dafb;
+}

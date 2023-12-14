@@ -1,0 +1,1 @@
+This is a counter for churches that do annual long Hallelujahs, you can count from as low as 7 to 5000. it can be easily edited to surpass that by changing just a line of code.
