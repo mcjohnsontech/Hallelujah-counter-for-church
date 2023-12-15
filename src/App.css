@@ -1,10 +1,7 @@
 @font-face {
   font-family: "digital-7";
-  src:
-    local("digital-7"),
-    url("/public/digital-7.ttf") format("truetype");
+  src: local("digital-7"), url("/public/digital-7.ttf") format("truetype");
 }
-
 
 body {
   margin: 0;
@@ -20,7 +17,10 @@ body {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+h1.text-3xl.font-bold.underline {
+  font-size: 4vw;
+  line-height: 2;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,26 +32,27 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.App-header >div {
+.App-header > div {
   display: flex;
   grid-gap: 1.6rem;
-  width: 400px;
+  width: 30vw;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
 
-.App-header >div> span {
+.App-header > div > span {
   font-family: digital-7;
-  font-size: 7rem;
+  font-size: 10vw;
 }
 
 .App-input {
   outline: 2px solid white;
   border: 0;
-  border-radius: 0.4rem;
-  width: 500px;
-  height: 35px;
+  border-radius: 0.4vw;
+  width: 40vw;
+  font-size: 2vw;
+  /* height: 6vh; */
   background: transparent;
   color: white;
   padding: 0, 1rem, 0, 1rem;
@@ -59,13 +60,14 @@ body {
 .App-input:placeholder,
 .App-input::value {
   text-align: center;
+  color: white;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.form-control:focus{
+.form-control:focus {
   background-color: transparent;
   outline: white;
   color: white;
@@ -74,12 +76,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .App-button {
-  width: 120px;
-  height: 40px;
-  border-radius: 6px;
+  width: 7vw;
+  height: 6vh;
+  border-radius: 0.3vw;
   border: none;
   outline: 0;
-  margin-top: 2rem;
+  font-size: 1.3vw;
+  text-align: center;
+  margin-top: 1.8vw;
 }
 .App-button:active {
   outline: 0;
@@ -87,4 +91,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .App-link {
   color: #61dafb;
+}
+.App-header.text {
+  font-size: 10vw;
 }
