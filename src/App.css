@@ -32,7 +32,7 @@ h1.text-3xl.font-bold.underline {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.App-header > div {
+.App-header > .div {
   display: flex;
   grid-gap: 1.6rem;
   width: 30vw;
@@ -85,7 +85,7 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
   margin-top: 1.8vw;
 }
-.App-button:active {
+.App-button:active, .App-button-count:active {
   outline: 0;
   border: 0;
 }
@@ -94,4 +94,42 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .App-header.text {
   font-size: 10vw;
+}
+button.App-button-count {
+  width: 50px;
+  text-align: center;
+  background-color: initial;
+  color: #fff;
+  font-size: 3rem;
+}
+.arrows {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+
+  & button{
+    background-color: #282c34;
+    outline: none;
+    border: 1px solid #ffffff2a;
+    & img{
+      height: inherit;
+    }
+
+  }
+}
+
+@media (max-width: 440px) {
+  .App-header > div > span {
+    font-family: digital-7;
+    font-size: 20vw;
+  }
+  .App-header.text{
+    text-align: center;
+  }
+  .App-button {
+    width: 14vw;
+    height: 4vh;
+    font-size: 3.5vw;
+    margin-top: 3.8vw;
+}
 }

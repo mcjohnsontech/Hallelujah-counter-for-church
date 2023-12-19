@@ -2,11 +2,20 @@ import { useState, useEffect } from "react";
 import React from "react";
 // import { useNavigate } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
+import leftArrow from "../left-arrow.png";
+import rightArrow from "../right-arrow.png";
 
 function Counter() {
-  let {id} = useParams();
+  let { id } = useParams();
   let navigate = useNavigate();
   const [count, setCount] = useState(0);
+
+  const leftHand = () => {
+    count > 0 ? setCount(count - 1) : console.log("");
+  };
+  const rightHand = () => {
+    setCount(count + 1);
+  };
 
   useEffect(() => {
     const handleKeyUp = (event) => {
@@ -27,28 +36,35 @@ function Counter() {
   const integer = parseInt(id);
 
   if (count === integer) {
-    navigate(`/conffeti/${integer}`)
-    console.log('succeded');
+    navigate(`/conffeti/${integer}`);
+    console.log("succeded");
   }
-  function addedZeros(num , totalLength) {
-    return String(num).padStart(totalLength, '0')
+  function addedZeros(num, totalLength) {
+    return String(num).padStart(totalLength, "0");
   }
-  const adjustAccording = id.length
-  const mee = addedZeros(count,adjustAccording)
+  const adjustAccording = id.length;
+  const mee = addedZeros(count, adjustAccording);
 
-  let strLetters = [...mee]
-  
-  
+  let strLetters = [...mee];
 
   return (
     <div className="App-header">
-      <div>
-        {strLetters.map((x) =>  (<span>{x}</span>))}
+      <div className="div">
+        {strLetters.map((x) => (
+          <span>{x}</span>
+        ))}
+      </div>
+      <div className="arrows">
+        <button className="App-button-count" onClick={leftHand}>
+          -
+        </button>
+        <button className="App-button-count" onClick={rightHand}>
+          +
+        </button>
       </div>
     </div>
   );
 }
-
 
 export default Counter;
 
